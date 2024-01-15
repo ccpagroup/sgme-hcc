@@ -1,0 +1,189 @@
+short_name,ID,Sub_Class,Class
+THPGG,HMDB0033068,Carbohydrates and carbohydrate conjugates,Glycosides 
+"1,2-Dioleoyl PC",103588,Glycerophosphocholines,Glycerophospholipids
+"13,14-Dihydro PGF-1a",HMDB0005076 ,Eicosanoids,Fatty acyls
+13-OH-alpha-Tocopherol,HMDB0015648,Quinone and hydroquinone lipids,Prenol lipids 
+SAPC,LMGP01010802,Glycerophosphocholines,Glycerophospholipids
+2-Acetyl-3-methylpyrazine,HMDB30001,NA,Carbonyls
+3-Dechloroethylifosfamine,HMDB13858,Organic phosphoramides,Others
+3-Methylthio-heptanal,HMDB32426,NA,Carbonyls
+Sulfatide (d18:1/22:0),HMDB0012316,Glycosphingolipids,Sphingolipids
+3-O-Sulfogalactosylceramide (d18:1/24:1),HMDB0012318,Glycosphingolipids,Sphingolipids
+"8,11,14-Eicosatrienoic acid",HMDB0002925,Fatty acids and conjugates,Fatty acyls
+8-HETrE,HMDB0000673,Lineolic acids and derivatives,Fatty acyls
+Adenine,HMDB0000034,Purines and purine derivatives,Nucleotides
+Adrenoyl ethanolamide,HMDB0013626,Amines,Others
+Amitenone,HMDB0029550,Diterpenoids,Prenol lipids
+Arachidonic acid,HMDB0001043,Fatty acids and conjugates,Fatty acyls
+Ascobate,HMDB00044,Furanones,Others
+Behenic acid,HMDB0000944,Fatty acids and conjugates,Fatty acyls
+CerP(d18:1/22:0),HMDB0010703,Phosphosphingolipids,Sphingolipids
+CerP(d18:1/24:1),HMDB0010705,Phosphosphingolipids,Sphingolipids
+Cerulenin,HMDB15168,Oxirane carboxylic acids and derivatives,Others
+Cholesterol sulfate,HMDB0000653,Cholestane steroids,Steroids
+"CL(1'-[18:0/18:2],3'-[20:0/20:0])",LMGP12010359,Glycerophosphoglycerophosphoglycerols,Glycerophospholipids
+"CL(1'-[20:0/20:0],3'-[18:2/16:0])",LMGP12011033,Glycerophosphoglycerophosphoglycerols,Glycerophospholipids
+CL(16:1/22:5/18:1/16:1),HMDB0057778,Glycerophosphoglycerophosphoglycerols,Glycerophospholipids
+CL(18:2/20:4/18:1/16:0),HMDB0111793,Glycerophosphoglycerophosphoglycerols,Glycerophospholipids
+CL(8:0/10:0/18:1/18:2),NA,Glycerophosphoglycerophosphoglycerols,Glycerophospholipids
+CL(8:0/10:0/18:2/18:2),HMDB0117902,Glycerophosphoglycerophosphoglycerols,Glycerophospholipids
+DG(14:0/0:0/16:1),HMDB0055960,Diradylglycerols,Glycerolipids
+DG(14:0/20:2/0:0),HMDB07022,Diradylglycerols,Glycerolipids
+DG(14:0/22:2/0:0),HMDB0007030,Diradylglycerols,Glycerolipids
+DG(14:0/22:2/0:0),HMDB0007030,Diradylglycerols,Glycerolipids
+DG(14:0/22:3/0:0),LMGL02010398,Diradylglycerols,Glycerolipids
+DG(16:0/0:0/18:1),HMDB0056017,Diradylglycerols,Glycerolipids
+DG(16:0/0:0/18:3),HMDB0056023 ,Lineolic acids and derivatives,Fatty acyls
+DG(16:0/16:1/0:0),HMDB0007099,Diradylglycerols,Glycerolipids
+DG(16:0/20:3/0:0),HMDB0007110,Diradylglycerols,Glycerolipids
+DG(16:1/22:2/0:0),HMDB0007146,Diradylglycerols,Glycerolipids
+DG(16:1/0:0/18:1),HMDB0056157,Diradylglycerols,Glycerolipids
+DG(18:0/0:0/18:3),HMDB0056049,Lineolic acids and derivatives,Fatty acyls
+DG(18:0/20:4/0:0),HMDB0007170,Diradylglycerols,Glycerolipids
+DG(18:1/0:0/18:1),HMDB0056177,Diradylglycerols,Glycerolipids
+DG(20:3/18:1/0:0),HMDB0007478,Diradylglycerols,Glycerolipids
+DG(20:3/18:1/0:0),HMDB07478,Diradylglycerols,Glycerolipids
+DG(20:5/20:1/0:0),HMDB0007572,Diradylglycerols,Glycerolipids
+DHAP(O-18:0),HMDB0011142,NA,Carbonyls
+Docosahexaenoic acid,HMDB0002183,Fatty acids and conjugates,Fatty acyls
+d-Tocotrienol,HMDB0030008,Quinone and hydroquinone lipids,Prenol lipids 
+Eicosapentaenoyl PAF C-16,HMDB0039528,Glycerophosphocholines,Glycerophospholipids
+Flavosativaside,5280641,C-glycosyl,Others
+Forssman antigen(d18:1/26:1),44260187,Neutral glycosphingolipids,Sphingolipids
+Gingerenone C,HMDB34720,Linear diarylheptanoids,Others
+GOTP,HMDB0031131,Glycerophosphates,Glycerophospholipids
+Glycerophosphocholine,HMDB0000086,Glycerophosphocholines,Glycerophospholipids
+Glycochenodeoxycholate-3-sulfate,HMDB02497,"Bile acids, alcohols and derivatives",Steroids
+Glycolithocholate acetate,25201677,"Bile acids, alcohols and derivatives",Steroids
+Heptadecanoic acid,HMDB02259,NA,Fatty acyls
+Homodolichosterone,HMDB34079,Stigmastanes and derivatives,Steroids
+Hydroxyhexamide,HMDB0060610,Benzenesulfonamides,Others
+Latanoprost,HMDB0014792,Eicosanoids,Fatty acyls
+Linoleic acid,HMDB0000673,Lineolic acids and derivatives,Fatty acyls
+LysoPA(0:0/18:1),HMDB07851,Glycerophosphates,Glycerophospholipids
+L-Palmitoylcarnitine,HMDB0000222,Fatty acid esters,Fatty acyls
+LysoPC(16:0/0:0),HMDB0010382,Glycerophosphocholines,Glycerophospholipids
+LysoPC(16:0/0:0),HMDB0010382,Glycerophosphocholines,Glycerophospholipids
+LysoPC(18:0/0:0),HMDB0010384,Glycerophosphocholines,Glycerophospholipids
+LysoPC(18:1/0:0),HMDB0002815,Glycerophosphocholines,Glycerophospholipids
+LysoPC(18:2/0:0),HMDB10386,Glycerophosphocholines,Glycerophospholipids
+LysoPC(20:4/0:0),HMDB0010396,Glycerophosphocholines,Glycerophospholipids
+LysoPE(0:0/16:0),HMDB0011473 ,Glycerophosphoethanolamines,Glycerophospholipids
+LysoPE(0:0/18:0),HMDB0011129,Glycerophosphoethanolamines,Glycerophospholipids
+LysoPE(18:1/0:0),HMDB0011505,Glycerophosphoethanolamines,Glycerophospholipids
+MG(18:0/0:0/0:0),HMDB11131,Monoradylglycerols,Glycerolipids
+MG(0:0/18:2/0:0),HMDB11538,Monoradylglycerols,Glycerolipids
+MG(0:0/20:3/0:0),HMDB11545,Monoradylglycerols,Glycerolipids
+Mulberrofuran T,HMDB35940,Flavonoids ,Others
+"N-Acetyl-2,3-dihydro-1H-pyrrole",HMDB31163,NA,Others
+N-Acetyl-glutamyl-5-phosphate,HMDB06456,"Amino acids, peptides, and analogues",Amino acids
+Nonadecanoic acid,HMDB00772,Fatty acids and conjugates,Fatty acyls
+Oleic acid,HMDB0000207,Fatty acids and conjugates,Fatty acyls
+Oleoylcarnitine,HMDB0005065,Fatty acid esters,Fatty acyls
+PA(O-20:4/2:0),HMDB11156,Glycerophosphates,Glycerophospholipids
+PAF C-16,HMDB0062195,Glycerophosphocholines,Glycerophospholipids
+Palmitic acid,HMDB0000220 ,Fatty acid esters,Fatty acyls
+Panaxynol linoleate,HMDB41177,Lineolic acids and derivatives,Fatty acyls
+PC(14:0/18:1),NA,Glycerophosphocholines,Glycerophospholipids
+PC(14:1/15:0),HMDB0007901,Glycerophosphocholines,Glycerophospholipids
+PC(15:0/17:1),LMGP01011413,Glycerophosphocholines,Glycerophospholipids 
+PC(15:0/18:0),HMDB0007937,Glycerophosphocholines,Glycerophospholipids
+PC(15:0/20:2),HMDB0007946,Glycerophosphocholines,Glycerophospholipids
+PC(15:0/20:3),HMDB0007947,Glycerophosphocholines,Glycerophospholipids
+PC(15:0/20:4),HMDB0007949,Glycerophosphocholines,Glycerophospholipids
+PC(16:0/18:0),HMDB0007970,Glycerophosphocholines,Glycerophospholipids
+PC(16:0/P-18:0),HMDB0007995,Glycerophosphocholines,Glycerophospholipids
+PC(16:1/14:0),HMDB0007998,Glycerophosphocholines,Glycerophospholipids
+PC(16:1/16:1),HMDB0008002,Glycerophosphocholines,Glycerophospholipids
+PC(18:0/18:1),NA,Glycerophosphocholines,Glycerophospholipids
+PC(18:0/20:2),LMGP01010793,Glycerophosphocholines,Glycerophospholipids
+PC(18:0/20:4),"	LMGP20010001",Glycerophosphocholines Oxidized,Glycerophospholipids
+PC(18:1/18:1),HMDB0000593,Glycerophosphocholines,Glycerophospholipids
+PC(18:1/22:6),HMDB0008506,Glycerophosphocholines,Glycerophospholipids
+PC(18:3/20:0),HMDB0008175,Glycerophosphocholines,Glycerophospholipids
+PC(19:0/11:0),LMGP01010969,Glycerophosphocholines,Glycerophospholipids
+PC(20:3/22:6),HMDB0008738,Glycerophosphocholines,Glycerophospholipids
+PC(20:4/0:0),HMDB0010395,Glycerophosphocholines,Glycerophospholipids
+PC(20:5/16:0),HMDB08495 ,Glycerophosphocholines,Glycerophospholipids
+PC(22:1/12:0),LMGP01012004,Glycerophosphocholines,Glycerophospholipids
+PC(22:4/16:0),HMDB0008626,Glycerophosphocholines,Glycerophospholipids
+PC(22:5/18:0),HMDB0008661,Glycerophosphocholines,Glycerophospholipids
+PC(22:5/16:0),HMDB0008692,Glycerophosphocholines,Glycerophospholipids
+PC(22:6/16:0),HMDB0008725,Glycerophosphocholines,Glycerophospholipids
+PC(22:6/18:0),HMDB0008727,Glycerophosphocholines,Glycerophospholipids
+PC(O-16:1/18:0),HMDB0013412,Glycerophosphocholines,Glycerophospholipids
+PC(O-17:0/20:4),LMGP01020081,Glycerophosphocholines,Glycerophospholipids
+PC(O-18:1/O-18:1),HMDB0000593,Glycerophosphocholines,Glycerophospholipids
+PE(12:0/21:0),LMGP02010377,Glycerophosphoethanolamines,Glycerophospholipids
+PE(14:0/22:5),HMDB08845,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:0/18:0),HMDB0008925,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:0/18:1),LMGP02010010,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:0/18:1),HMDB0008927,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:0/18:2),HMDB0008928,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:0/22:6),HMDB0008946,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:1/22:0),HMDB0008973,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:1/24:0),HMDB0008980,Glycerophosphoethanolamines,Glycerophospholipids
+PE(16:1/22:6),HMDB08979,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/18:2),HMDB0008994,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/20:2),HMDB0009000,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/20:3),HMDB0009002,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/20:4),HMDB0009003,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/22:4),HMDB0009009,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/22:5),HMDB0009010,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:0/22:6),HMDB0009012,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:1/18:3),HMDB0009028,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:1/18:0),HMDB0009057,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:2/20:0),HMDB0009097,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:2/22:0),HMDB0009105,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:3/22:6),HMDB09144,Glycerophosphoethanolamines,Glycerophospholipids
+PE(18:4/22:6),HMDB09210,Glycerophosphoethanolamines,Glycerophospholipids
+PE(19:0/22:6),LMGP02010792,Glycerophosphoethanolamines,Glycerophospholipids
+PE(19:1/0:0),LMGP02050019,Glycerophosphoethanolamines,Glycerophospholipids
+PE(20:0/16:0),HMDB0009220,Glycerophosphoethanolamines,Glycerophospholipids
+PE(20:0/16:1),HMDB0009221,Glycerophosphoethanolamines,Glycerophospholipids
+PE(20:0/20:3),HMDB0009232,Glycerophosphoethanolamines,Glycerophospholipids
+PE(20:4/P-16:0),HMDB0009411,Glycerophosphoethanolamines,Glycerophospholipids
+PE(22:4/15:0),HMDB0009582,Glycerophosphoethanolamines,Glycerophospholipids
+PE(22:5/18:1),HMDB0009653,Glycerophosphoethanolamines,Glycerophospholipids
+PE(22:6/20:3),HMDB0009694,Glycerophosphoethanolamines,Glycerophospholipids
+PE(22:6/22:6),HMDB0009705,Glycerophosphoethanolamines,Glycerophospholipids
+PE(22:6/P-16:0),HMDB0009708,Glycerophosphoethanolamines,Glycerophospholipids
+PE(22:6/P-18:0),HMDB0009709,Glycerophosphoethanolamines,Glycerophospholipids
+PE(24:0/18:4),HMDB0009723,Glycerophosphoethanolamines,Glycerophospholipids
+PE(24:0/20:4),HMDB0009729,Glycerophosphoethanolamines,Glycerophospholipids
+PG(16:0/18:1),HMDB0010573,Glycerophosphoglycerols,Glycerophospholipids
+PG(18:0/18:1),HMDB0010603,Glycerophosphoglycerols,Glycerophospholipids
+PG(18:0/18:2),HMDB0010605,Glycerophosphoglycerols,Glycerophospholipids
+PG(18:1/22:6),HMDB0010629,Glycerophosphoglycerols,Glycerophospholipids
+Phosphocholine,HMDB0001565,Quaternary ammonium salts,Cholines
+PI(16:0/16:2),HMDB09780,Glycerophosphoinositols,Glycerophospholipids
+PI(16:0/18:2),HMDB0009784,Glycerophosphoinositols,Glycerophospholipids
+PI(16:0/22:3),HMDB0009792 ,Glycerophosphoinositols,Glycerophospholipids
+PI(18:0/20:4),HMDB0009815,Glycerophosphoinositols,Glycerophospholipids
+PI(18:0/22:4),HMDB0009817,Glycerophosphoinositols,Glycerophospholipids
+PI(18:0/22:6),HMDB0009821,Glycerophosphoinositols,Glycerophospholipids
+PI(18:1/18:3),HMDB0009827,Glycerophosphoinositols,Glycerophospholipids
+PI(18:2/18:0),HMDB0009847,Glycerophosphoinositols,Glycerophospholipids
+PI(18:3/18:0),HMDB0009858,Glycerophosphoinositols,Glycerophospholipids
+Pirbuterol,HMDB0015407,Hydroxypyridines,Others
+Pristanic acid,HMDB0000795,Diterpenoids,Prenol lipids
+Propylene glycol alginate,HMDB39870,Benzenediols,Others
+PS(17:0/0:0),LMGP03050030,Glycerophosphoserines,Glycerophospholipids
+PS(18:0/18:1),HMDB0010163,Glycerophosphoserines,Glycerophospholipids
+PS(18:0/20:3),HMDB0012382,Glycerophosphoserines,Glycerophospholipids
+PS(20:3/18:1),HMDB0012423,Glycerophosphoserines,Glycerophospholipids
+Retinol acetate,HMDB0035185,Retinoids,Prenol lipids 
+Serotinose,HMDB29897,Carbohydrates and carbohydrate conjugates,Glycosides 
+SM(d18:0/16:1),HMDB13464,Phosphosphingolipids,Sphingolipids
+Sodium glycocholate,23670522,Bile salt,Steroids
+Stearic acid,HMDB0000827,Fatty acids and conjugates,Fatty acyls
+Taraxinic acid glucosyl ester,HMDB0035249,Terpene lactones,Prenol lipids
+TG(14:0/18:4/16:0),HMDB0042783,Triradylcglycerols,Glycerolipids
+TG(15:0/16:1/16:0),HMDB0043193,Triradylcglycerols,Glycerolipids
+TG(16:0/20:0/20:3),HMDB0043951 ,Triradylcglycerols,Glycerolipids
+TG(18:0/16:1/16:1),HMDB0044889,Triradylcglycerols,Glycerolipids
+Unannotated,NA,Unannotated,Unannotated
+Vitamin A,HMDB0000305,Retinoids,Prenol lipids 
+PI(20:2/17:1),LMGP06010433,Glycerophosphoinositols,Glycerophospholipids
+Laudanosine,HMDB0030213,Benzylisoquinolines,Others
+PC(20:4/16:0),HMDB0008462,Glycerophosphocholines,"	Glycerophospholipids"
