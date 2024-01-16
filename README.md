@@ -115,7 +115,7 @@ Running the SgME profiling code for the HCC study
 
 5. Run all the data processing and analysis steps.
    This must be done before generating all the figures.
-   If a script hangs, please close the R session and re-run the script
+   If a script hangs without any progress after one hour, please close the R session and re-try the script
    in a new R session.
    ```R
    source("Step1_Find_LCMS_Marker.R")
