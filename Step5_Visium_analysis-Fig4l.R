@@ -21,7 +21,7 @@ CEG_list_vip <- readRDS(here("results", "RNA", "CEG_list_vip.rds"))
 gene_sets <- list()
 for (name in names(CEG_list_vip)) {
     ens_ids <- CEG_list_vip[[name]]$CEG_ensembls
-    annots <- dplyr::select(
+    annots <- select(
         org.Hs.eg.db, keys=ens_ids, 
         columns="SYMBOL", keytype="ENSEMBL"
     )

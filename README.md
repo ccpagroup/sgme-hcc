@@ -91,6 +91,7 @@ Running the SgME profiling code for the HCC study
 
 3. Run the R environment
    ```console
+   $ cd $desired_project_location/sgme-hcc
    $ R
    ```
 
@@ -102,17 +103,20 @@ Running the SgME profiling code for the HCC study
    BiocManager::install(version = "3.17")
    
    BiocManager::install(c(     
-      "ComplexHeatmap", "caret", "clusterProfiler", "DESeq2", "dendsort",
-      "doParallel", "e1071", "enrichplot", "fs", "ggbeeswarm", "ggpmisc",
-      "ggpubr", "ggrastr", "ggrepel", "ggupset", "glmnet", "here", "ijtiff",
-      "jsonlite", "MetaboCoreUtils", "MsCoreUtils", "org.Hs.eg.db", "parallel",
-      "png", "pROC", "RColorBrewer", "RImageJROI", "readxl", "ropls", "rstatix",
-      "Seurat", "tidyverse"
+      "ComplexHeatmap", "caret", "clusterProfiler", "DESeq2", 
+      "dendsort", "doParallel", "e1071", "enrichplot", "fs", 
+      "ggbeeswarm", "ggpmisc", "ggpubr", "ggrastr", "ggrepel", 
+      "ggupset", "glmnet", "here", "ijtiff", "jsonlite", 
+      "MetaboCoreUtils", "MsCoreUtils", "org.Hs.eg.db", 
+      "parallel", "png", "pROC", "RColorBrewer", "RImageJROI",
+      "readxl", "ropls", "rstatix", "Seurat", "tidyverse"
    ))
    ```
 
 5. Run all the data processing and analysis steps.
    This must be done before generating all the figures.
+   If a script hangs, please close the R session and re-run the script
+   in a new R session.
    ```R
    source("Step1_Find_LCMS_Marker.R")
    source("Step2_Find_Prominent_Peaks-FigS4.R")
@@ -121,11 +125,12 @@ Running the SgME profiling code for the HCC study
    source("Step5_Visium_analysis-Fig4l.R")
    source("Step6_SgMERdeconv-Fig6bcdef-S11.R")
    source("Step7_ExportData.R")
+   q()
    ```
 
 6. Generate all the figures, which are saved under the `figures/` directories 
-   as both PNG and PDF formats. The PDF formats can be imported into Inkscape 
-   and updated.
+   as both PNG and PDF formats. The PDF formats can be imported into Inkscape.
+   It is recommended to run the following scripts under a new fresh R session.
    ```R
    source("Fig1ceg-S2_LCMS_spectrum.R")
    source("Fig1fghij-2d-S3_Find_Stage_AMFs_DEGs.R")
@@ -144,6 +149,7 @@ Running the SgME profiling code for the HCC study
    ###       needed by Fig5g
    source("Fig2g-5g_TvsN_by_groups.R")
    source("FigS1_LCMS_spectrum.R")
+   q()
    ```
 
 License for the code and processed data

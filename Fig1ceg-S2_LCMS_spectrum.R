@@ -24,7 +24,7 @@ sample_list <- read_excel(
         sheet = "Table_S1b Sample_Usages"
     ) %>%
     dplyr::select("Case ID", "Section ID") %>%
-    rename(`Case ID` = "case_id", `Section ID` = "section_id") %>%
+    dplyr::rename(case_id = `Case ID`, section_id = `Section ID`) %>%
     slice_head(n=117)
 
 sample_dist <- left_join(
