@@ -307,7 +307,7 @@ PlotDistUpset <- function(
             values_to = "is_member"
         ) %>%
         filter(is_member) %>%
-        select(-is_member) %>%
+        dplyr::select(-is_member) %>%
         group_by(peak_id) %>%
         summarize(ROIs = list(ROI))
 

@@ -25,7 +25,7 @@ load(here("data", "lcms", "lcms_peaks.Rdata"))
 GetLCMSPlotData <- function(lcms_mode, is_diff) {
     plot_data <- left_join(
         lcms_raw,
-        clinical_info %>% select(case_id, histological_diagnosis),
+        clinical_info %>% dplyr::select(case_id, histological_diagnosis),
         by = "case_id"
     ) %>%
         ### Filter for a partical case and section

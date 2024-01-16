@@ -1,7 +1,7 @@
 ### Study configurations
 
 ### Define the location of the STx profiles for F008_CA and F011_CA
-visium_raw_dir <- "desired_data_location/STx_profiles"
+visium_raw_dir <- "$desired_data_location/STx_profiles"
 
 peak_summary_mode_study <- "lcms_only"
 is_normalized_study <- TRUE

@@ -83,7 +83,7 @@ for (reg_name in names(CEG_list_vip)) {
 ### Load the peaks
 load(here("data", "lcms", "lcms_peaks.Rdata"))
 export_data <- lcms_hit_peaks %>%
-    select(
+    dplyr::select(
         peak_id,
         mz_id, lcms_mode, ion_type,
         iqr, mean, med, pct90,

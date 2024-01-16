@@ -106,7 +106,7 @@ PlotStage <- function(cur_stats, log2FC_thres, padj_thres, omics_name, col_title
     column_labels <- c("Stage IB", "Stage II", "Stage III")
 
     plot_mat %>%
-        select(
+        dplyr::select(
             S1N, S2N, S3N
             # S1_log2FC, S2_log2FC, S3_log2FC, #T_log2FC
         ) %>%

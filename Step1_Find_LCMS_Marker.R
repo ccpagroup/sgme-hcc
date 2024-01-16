@@ -145,7 +145,7 @@ lcms_raw_peaks <- tibble(
 lcms_raw_peaks <- lcms_raw_peaks %>%
     left_join(
         msms_peaks %>%
-            select(mz_id, MSMS_annotation, Comment, mz, exact_mz),
+            dplyr::select(mz_id, MSMS_annotation, Comment, mz, exact_mz),
         by = "mz_id"
     )
 

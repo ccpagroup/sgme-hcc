@@ -39,7 +39,7 @@ mean_MSI_data <- bind_rows(
 ### Must have at least two samples per group
 good_ids <- mean_MSI_data |>
     group_by(peak_id) |>
-    count(section_type, .drop = FALSE) |>    
+    dplyr::count(section_type, .drop = FALSE) |>    
     summarize(n_min = min(n), .groups = "drop") |> 
     filter(n_min > 1) |>
     pull(peak_id)
@@ -114,7 +114,7 @@ PlotVolcano <- function(
                 # mz_ids %in% label_mz_ids, MSMS_annotations, NA
             )
         ) %>%
-        select(uni_log2FC, uni_pval, uni_padj, is_signif, MSMS_annotations) 
+        dplyr::select(uni_log2FC, uni_pval, uni_padj, is_signif, MSMS_annotations) 
     
     up_num <- plot_data %>%
         filter(uni_padj < 0.1, uni_log2FC > 0) %>%

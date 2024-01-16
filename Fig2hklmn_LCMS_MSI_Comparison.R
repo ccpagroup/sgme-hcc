@@ -23,8 +23,11 @@ sample_list <- read_excel(
     ) %>%
     slice_head(n=117) %>%
     filter(!is.na(`DESI-MSI`)) %>%
-    select(`Case ID`, `Section ID`) %>%
-    rename(`Case ID` = "case_id", `Section ID` = "section_id")
+    dplyr::select(`Case ID`, `Section ID`) %>%
+    dplyr::rename(
+        case_id = `Case ID`,
+        section_id = `Section ID`
+    )
 
 ### "========================================================================"
 ### Fig. 2h. Distribution of the DESI-MSI samples
@@ -48,7 +51,7 @@ sample_list <- sample_list |>
 sample_dist <- left_join(
         sample_list,
         clinical_info %>%
-            select(
+            dplyr::select(
                 case_id,
                 histological_diagnosis, tumor_stage_AJCC_V8,
                 edmonson_grade
@@ -88,7 +91,7 @@ sample_dist <- left_join(
     arrange(
         tumor_stage, case_id
     ) %>%
-    rename(section_num = "sample_num")
+    dplyr::rename(sample_num = `section_num`)
 
 #ordered_case_ids <- unique(sample_dist$case_id)
 ordered_case_ids <- sample_dist %>%
@@ -196,7 +199,7 @@ mean_stats <- bind_rows(
 
 test_res <- mean_stats %>%
     unite("sample_id", c("case_id", "section_type")) %>%
-    select(peak_id, ave_msi_mean, ave_lcms_mean) %>%
+    dplyr::select(peak_id, ave_msi_mean, ave_lcms_mean) %>%
     group_by(peak_id) %>%
     mutate(sample_num = n()) %>%
     filter(sample_num > min_sample_num) %>%

@@ -176,7 +176,7 @@ SaveStudyMSIData <- function(
     ### Add VIP value
     #study_data <- left_join(
     #    study_data,
-    #    lcms_hit_peaks %>% select(peak_id, vip, TvsN_padj, TvsN_log2FC),
+    #    lcms_hit_peaks %>% dplyr::select(peak_id, vip, TvsN_padj, TvsN_log2FC),
     #    by = "peak_id"
     #) %>% relocate(
     #    vip, .after = "mz_ids"
@@ -564,7 +564,7 @@ LoadMSIMat <- function(
     ### Convert the data to a matrix
     res <- if (is_normalized) {
         roi_stats %>%
-            select(
+            dplyr::select(
                 sample_label, peak_id, msi_norm_mean
             ) %>%
             pivot_wider(
@@ -574,7 +574,7 @@ LoadMSIMat <- function(
             )
     } else {
         roi_stats %>%
-            select(
+            dplyr::select(
                 sample_label, peak_id, msi_mean
             ) %>%
             pivot_wider(
@@ -1648,7 +1648,7 @@ LoadLCMSHitData <- function(
     peak_table <- lcms_hit_peaks %>%
         filter(`ion_type` == !!ion_type) %>%
         arrange(peak_id) %>%
-        select(peak_id, mz, mz_id)
+        dplyr::select(peak_id, mz, mz_id)
 
     ### Load the raw data
     raw_data <- LoadLCMSRawData(lcms_mode)
@@ -2257,7 +2257,7 @@ PlotSgMEvsPathMarkers <- function(
             filter(mz %in% all_mkrs$mz, !is.na(.data[[info_cat]])),
         all_mkrs %>%
             filter(`score_name` == score_name_in) %>%
-            select(mz, mkr_name, norm_coeff, score_name),
+            dplyr::select(mz, mkr_name, norm_coeff, score_name),
         by = "mz"
     )
 
@@ -2717,7 +2717,7 @@ AddAnnotations <- function(data_tibble) {
 
     left_join(
         data_tibble,
-        lcms_hit_peaks %>% select(peak_id, MSMS_annotation, mz),
+        lcms_hit_peaks %>% dplyr::select(peak_id, MSMS_annotation, mz),
         by = "peak_id"
     ) %>%
     relocate(
@@ -2835,7 +2835,7 @@ PlotMetabolites <- function(
         arrange(Diff)
 
     pos_plot <- plot_data %>%
-        select(
+        dplyr::select(
             ID, mz, normal_mean, tumor_mean, Diff
         ) %>%
         pivot_longer(
@@ -2920,7 +2920,7 @@ PreprocessData <- function(
         )
 
         training_data_balanced <- sampled_data %>%
-            select(where(is.numeric)) %>%
+            dplyr::select(where(is.numeric)) %>%
             as.matrix()
 
         training_grps_balanced <- sampled_data$grps
@@ -3269,7 +3269,7 @@ GetGrpDist <- function(
     }
 
     tissue_pred_tibble <- tissue_pred_tibble %>%
-        count(pred_label, .drop = FALSE) %>%
+        dplyr::count(pred_label, .drop = FALSE) %>%
         filter(!is.na(pred_label)) %>%
         mutate(
             percent = n / sum(n) * 100,
@@ -3277,7 +3277,7 @@ GetGrpDist <- function(
         ) %>%
         ungroup() %>%
         left_join(
-            clinical_info %>% select(
+            clinical_info %>% dplyr::select(
                 slide_id, edmonson_grade, metavir_fibrosis_score, tumor_stage_AJCC_V8,
                 necrosis_score, steatosis_score, case_id
             ),
@@ -4483,7 +4483,7 @@ ConvertPredTibbleToMat <- function(
 
     ### Convert to a matrix
     pred_img <- pred_tibble %>%
-        select(all_of(c("x", "y", pred_label_name))) %>%
+        dplyr::select(all_of(c("x", "y", pred_label_name))) %>%
         #rename(pred_label = all_of(pred_label_name)) %>%
         mutate(
             x = as.integer(x),

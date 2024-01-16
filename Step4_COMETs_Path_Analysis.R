@@ -86,7 +86,7 @@ GetPMs <- function(x, dir) {
 
     selected_markers %>%
         left_join(
-            lcms_hit_peaks %>% select(peak_id, mz_id),
+            lcms_hit_peaks %>% dplyr::select(peak_id, mz_id),
             by = "peak_id"
         ) %>%
         dplyr::pull(mz_id) %>%

@@ -22,7 +22,7 @@ lcms_InterTH_mat <- lcms_raw_peaks %>%
         (S2_vs_N_padj < LCMS_padj_thres & abs(S2_log2FC) > LCMS_log2FC_thres)|
         (S3_vs_N_padj < LCMS_padj_thres & abs(S3_log2FC) > LCMS_log2FC_thres)
     ) %>%
-    select(mz_id, S1_IETH_type, S2_IETH_type, S3_IETH_type) %>%
+    dplyr::select(mz_id, S1_IETH_type, S2_IETH_type, S3_IETH_type) %>%
     arrange(-S1_IETH_type, -S2_IETH_type, -S3_IETH_type) %>%
     column_to_rownames("mz_id") %>%
     as.matrix()
@@ -33,7 +33,7 @@ lcms_IntraTH_mat <- lcms_raw_peaks %>%
         (S2_vs_N_padj < LCMS_padj_thres & abs(S2_log2FC) > LCMS_log2FC_thres)|
         (S3_vs_N_padj < LCMS_padj_thres & abs(S3_log2FC) > LCMS_log2FC_thres)
     ) %>%
-    select(mz_id, S1_IRTH_type, S2_IRTH_type, S3_IRTH_type) %>%
+    dplyr::select(mz_id, S1_IRTH_type, S2_IRTH_type, S3_IRTH_type) %>%
     arrange(-S1_IRTH_type, -S2_IRTH_type, -S3_IRTH_type) %>%
     column_to_rownames("mz_id") %>%
     as.matrix()
@@ -44,7 +44,7 @@ lcms_hit_InterTH_mat <- lcms_hit_peaks %>%
         (S2_vs_N_padj < LCMS_padj_thres & abs(S2_log2FC) > LCMS_log2FC_thres)|
         (S3_vs_N_padj < LCMS_padj_thres & abs(S3_log2FC) > LCMS_log2FC_thres)
     ) %>%
-    select(mz_id, S1_IETH_type, S2_IETH_type, S3_IETH_type) %>%
+    dplyr::select(mz_id, S1_IETH_type, S2_IETH_type, S3_IETH_type) %>%
     arrange(-S1_IETH_type, -S2_IETH_type, -S3_IETH_type) %>%
     column_to_rownames("mz_id") %>%
     as.matrix()
@@ -55,7 +55,7 @@ lcms_hit_IntraTH_mat <- lcms_hit_peaks %>%
         (S2_vs_N_padj < LCMS_padj_thres & abs(S2_log2FC) > LCMS_log2FC_thres)|
         (S3_vs_N_padj < LCMS_padj_thres & abs(S3_log2FC) > LCMS_log2FC_thres)
     ) %>%
-    select(mz_id, S1_IRTH_type, S2_IRTH_type, S3_IRTH_type) %>%
+    dplyr::select(mz_id, S1_IRTH_type, S2_IRTH_type, S3_IRTH_type) %>%
     arrange(-S1_IRTH_type, -S2_IRTH_type, -S3_IRTH_type) %>%
     column_to_rownames("mz_id") %>%
     as.matrix()
@@ -66,7 +66,7 @@ RNA_InterTH_mat <- RNA_raw_data %>%
         (S2_vs_N_padj < RNA_padj_thres & abs(S2_log2FC) > RNA_log2FC_thres)|
         (S3_vs_N_padj < RNA_padj_thres & abs(S3_log2FC) > RNA_log2FC_thres)
     ) %>%
-    select(gene_id, S1_IETH_type, S2_IETH_type, S3_IETH_type) %>%
+    dplyr::select(gene_id, S1_IETH_type, S2_IETH_type, S3_IETH_type) %>%
     arrange(-S1_IETH_type, -S2_IETH_type, -S3_IETH_type) %>%
     column_to_rownames("gene_id") %>%
     as.matrix()
@@ -77,7 +77,7 @@ RNA_IntraTH_mat <- RNA_raw_data %>%
         (S2_vs_N_padj < RNA_padj_thres & abs(S2_log2FC) > RNA_log2FC_thres)|
         (S3_vs_N_padj < RNA_padj_thres & abs(S3_log2FC) > RNA_log2FC_thres)
     ) %>%
-    select(gene_id, S1_IRTH_type, S2_IRTH_type, S3_IRTH_type) %>%
+    dplyr::select(gene_id, S1_IRTH_type, S2_IRTH_type, S3_IRTH_type) %>%
     arrange(-S1_IRTH_type, -S2_IRTH_type, -S3_IRTH_type) %>%
     column_to_rownames("gene_id") %>%
     as.matrix()

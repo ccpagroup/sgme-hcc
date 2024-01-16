@@ -68,7 +68,7 @@ multi_dist_data$case_id <- factor(
 
 ordered_sample_ids <- multi_dist_data %>%
     filter(pred_label == "G3") %>%
-    select(sample_id, case_id, section_id, tumor_stage_AJCC_V8, percent) %>%
+    dplyr::select(sample_id, case_id, section_id, tumor_stage_AJCC_V8, percent) %>%
     arrange(case_id, percent) %>%
     pull(sample_id)
 

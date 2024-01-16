@@ -23,14 +23,14 @@ sample_list <- read_excel(
         here("data", "lcms", "Supp_Tables_S1 to S4_v3.xlsx"),
         sheet = "Table_S1b Sample_Usages"
     ) %>%
-    select("Case ID", "Section ID") %>%
+    dplyr::select("Case ID", "Section ID") %>%
     rename(`Case ID` = "case_id", `Section ID` = "section_id") %>%
     slice_head(n=117)
 
 sample_dist <- left_join(
         sample_list,
         clinical_info %>%
-            select(
+            dplyr::select(
                 case_id, 
                 histological_diagnosis, tumor_stage_AJCC_V8,
                 edmonson_grade

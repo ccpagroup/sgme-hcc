@@ -2,13 +2,13 @@ Spatially-guided MEtabolomics (SgME) profiling of heteregenous human tumor
 tissues and deconvolution of metabolic-region compositions
 ===========================================================================
 
-### Corresponding authors for the study
+### Study corresponding authors
 * Lit-Hsin Loo, Bioinformatics Institute, A*STAR, Singapore (loolh@bii.a-star.edu.sg)
 * Pierce Kah-Hoe Chow, National Cancer Centre Singapore, Singapore (pierce.chow@duke-nus.edu.sg)
 * Yulan Wang, Singapore Phenome Center, Lee Kong Chian School of Medicine, Nanyang Technological University, Singapore (yulan.wang@ntu.edu.sg)
 
-Abstract
---------
+Study abstract
+--------------
 Bulk high-resolution mass spectrometry can provide sensitive and global snapshots of metabolites involved in cancer metabolism. However, intra-tumor heterogeneity (IntraTH) convolutes the cellular origins and tumor pathologies associated with the detected metabolites, thus making the selection of reproducible metabolic markers and the elucidation of the metabolic pathways and processes in cancer cells very challenging. Here, we present “Spatially-guided MEtabolomics (SgME) profiling”, a multi-omics data analysis approach to delineate IntraTH by integrating spatial and bulk metabolomics and transcriptomics profiles from the same tumors. We applied SgME profiling to 117 tumor and adjacent normal tissues from 26 surgically resected primary liver tumors, and constructed SgME maps of metabolic regions (MERs) associated with key histopathological features. We used these maps to survey IntraTH and to train regression models that can accurately predict the MER compositions of bulk tumor samples. We also discovered a group of putative metabolites that increase in low-grade tumor regions but abruptly decrease in necrotic regions. Our approach is general and may be applied to heterogenous tissues from cancers or other metabolic diseases.
 
 ![SgME Profiling](www/sgme_profiling.webp "SgME Profiling")
@@ -63,16 +63,38 @@ Running the SgME profiling code for the HCC study
 -------------------------------------------------
 1. Clone the git repository to a desired project location
    ```console
-   $ cd desired_project_location
+   $ cd $desired_project_location
    $ git clone https://github.com/ccpagroup/sgme-hcc.git
    ```   
 
-2. Run the R environment
+2. (Optional) Download the STx profiles to a desired data location. This is only
+   needed for the spatial transcriptomics analysis in Step 5 and Fig 4l.
+   
    ```console
-   R
+   $ cd $desired_data_location
+   $ wget https://data.cellXpress.org/2401-sgme-hcc/stx/STx_profiles.tar.xz
+   $ wget https://data.cellXpress.org/2401-sgme-hcc/stx/md5sum.txt
+   $ md5sum -c md5sum.txt
+   $ tar -xvf STx_profiles.tar.xz
+   $ rm STx_profiles.tar.xz
+   $ rm md5sum.txt
    ```
 
-3. Install bioconductor and all the required libraries
+   Set the location of the STx profiles by updating the configuration file,
+   `conf/study_conf.R`, using a text editor.
+
+   ```R
+   ### Define the location of the STx profiles for F008_CA and F011_CA
+   visium_raw_dir <- "$desired_data_location/STx_profiles"
+   ```
+
+
+3. Run the R environment
+   ```console
+   $ R
+   ```
+
+4. Install bioconductor and all the required libraries
    ```R
    if (!require("BiocManager", quietly = TRUE))
        install.packages("BiocManager")
@@ -83,64 +105,45 @@ Running the SgME profiling code for the HCC study
       "ComplexHeatmap", "caret", "clusterProfiler", "DESeq2", "dendsort",
       "doParallel", "e1071", "enrichplot", "fs", "ggbeeswarm", "ggpmisc",
       "ggpubr", "ggrastr", "ggrepel", "ggupset", "glmnet", "here", "ijtiff",
-      "jsonlite", "MetaboCoreUtils", "MsCoreUtils", "org.Hs.eg.db", "parallel", "png", "pROC", "RColorBrewer", "RImageJROI", "readxl", "ropls", "rstatix","Seurat", "tidyverse"
+      "jsonlite", "MetaboCoreUtils", "MsCoreUtils", "org.Hs.eg.db", "parallel",
+      "png", "pROC", "RColorBrewer", "RImageJROI", "readxl", "ropls", "rstatix",
+      "Seurat", "tidyverse"
    ))
-   ```
-
-4. (Optional) Download the STx profiles to a desired data location. This is only
-   needed for Step 5 and Fig 4l.
-   
-   ```console
-   $ cd desired_data_location
-   $ wget https://data.cellXpress.org/2401-sgme-hcc/stx/STx_profiles.tar.xz
-   $ wget https://data.cellXpress.org/2401-sgme-hcc/stx/md5sum.txt
-   $ md5sum -c md5sum.txt
-   $ tar -xvf STx_profiles.tar.xz
-   $ rm STx_profiles.tar.xz
-   $ rm md5su.txt
-   ```
-
-   Update the configuration file, `conf/study_conf.R`, to set the location
-   of the STx profiles
-
-   ```R
-   ### Define the location of the STx profiles for F008_CA and F011_CA
-   visium_raw_dir <- "desired_data_location/STx_profiles"
    ```
 
 5. Run all the data processing and analysis steps.
    This must be done before generating all the figures.
    ```R
-   source "Step1_Find_LCMS_Marker.R"
-   source "Step2_Find_Prominent_Peaks-FigS4.R"
-   source "Step3_Build_SgME_Map_Classifiers-Fig5ab-S10.R"
-   source "Step4_COMETs_Path_Analysis.R"
-   source "Step5_Visium_analysis-Fig4l.R"
-   source "Step6_SgMERdeconv-Fig6bcdef-S11.R"
-   source "Step7_ExportData.R"
+   source("Step1_Find_LCMS_Marker.R")
+   source("Step2_Find_Prominent_Peaks-FigS4.R")
+   source("Step3_Build_SgME_Map_Classifiers-Fig5ab-S10.R")
+   source("Step4_COMETs_Path_Analysis.R")
+   source("Step5_Visium_analysis-Fig4l.R")
+   source("Step6_SgMERdeconv-Fig6bcdef-S11.R")
+   source("Step7_ExportData.R")
    ```
 
 6. Generate all the figures, which are saved under the `figures/` directories 
    as both PNG and PDF formats. The PDF formats can be imported into Inkscape 
    and updated.
    ```R
-   source "Fig1ceg-S2_LCMS_spectrum.R"
-   source "Fig1fghij-2d-S3_Find_Stage_AMFs_DEGs.R"
-   source "Fig1k-2e_InterTH_and_IntraTH.R"
-   source "Fig2bc_Most_abundant_peaks.R"
-   source "Fig2hklmn_LCMS_MSI_Comparison.R"
-   source "Fig3e_DESI_ROI_Heatmap.R"
-   source "Fig3fgh_DESI_HistoPath_Classifiers.R"
-   source "Fig3ij_DESI_HistoPath_Perf.R"
-   source "Fig4abcdef_DESI_SgME_VIP_vs_Coeff.R"
-   source "Fig4j_S8_COMETs_Path_Pathway.R"
-   source "Fig5c_DESI_MER_Prediction.R"
-   source "Fig5def_SgME_PM_dist_heatmap.R"
+   source("Fig1ceg-S2_LCMS_spectrum.R")
+   source("Fig1fghij-2d-S3_Find_Stage_AMFs_DEGs.R")
+   source("Fig1k-2e_InterTH_and_IntraTH.R")
+   source("Fig2bc_Most_abundant_peaks.R")
+   source("Fig2hklmn_LCMS_MSI_Comparison.R")
+   source("Fig3e_DESI_ROI_Heatmap.R")
+   source("Fig3fgh_DESI_HistoPath_Classifiers.R")
+   source("Fig3ij_DESI_HistoPath_Perf.R")
+   source("Fig4abcdef_DESI_SgME_VIP_vs_Coeff.R")
+   source("Fig4j_S8_COMETs_Path_Pathway.R")
+   source("Fig5c_DESI_MER_Prediction.R")
+   source("Fig5def_SgME_PM_dist_heatmap.R")
    ### Note: Fig2g-5g_TvsN_by_groups.R must be run only after 
    ###       Fig5def_SgME_PM_dist_heatmaps.R because it will generate data
    ###       needed by Fig5g
-   source "Fig2g-5g_TvsN_by_groups.R"
-   source "FigS1_LCMS_spectrum.R"
+   source("Fig2g-5g_TvsN_by_groups.R")
+   source("FigS1_LCMS_spectrum.R")
    ```
 
 License for the code and processed data

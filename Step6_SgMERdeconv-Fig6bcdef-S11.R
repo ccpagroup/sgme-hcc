@@ -58,7 +58,7 @@ ME_region_stats <- ME_region_info %>%
         .groups = "drop"
     ) %>%
     left_join(
-        clinical_info %>% select(
+        clinical_info %>% dplyr::select(
             slide_id, case_id, tumor_stage_AJCC_V8, edmonson_grade,
             metavir_fibrosis_score, steatosis_score, necrosis_score
         ) %>% filter(!is.na(slide_id))

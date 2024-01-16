@@ -49,7 +49,7 @@ msms_p_mini <- lcms_raw_peaks %>%
             TRUE ~ "all"
         )
     ) %>%
-    select(
+    dplyr::select(
         mz_id, mean, pct90, peak_type, is_tested, is_msms, MSMS_annotation
     ) %>%
     ggplot(

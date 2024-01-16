@@ -131,7 +131,7 @@ LoadLCMSMat <- function(
 
     ### Convert the data to a matrix
     lcms_mat <- lcms_raw %>%
-        select(sample_id, mz_id, lcms_abd) %>%
+        dplyr::select(sample_id, mz_id, lcms_abd) %>%
         pivot_wider(
             names_from = mz_id, values_from = lcms_abd, values_fill = 0
         ) %>%
@@ -264,7 +264,7 @@ LoadMSMSData <- function() {
                 TRUE ~ TRUE
             )
         ) %>%
-        select(
+        dplyr::select(
             mz_id, ion_type, mz, is_confirmed,
             MSMS_annotation, exact_mz, Result, Comment
         ) %>%
@@ -540,7 +540,7 @@ AddClassAnnotation <- function(lcms_hit_peaks) {
                 short_name = "Unannotated"
             )
         ) %>%
-        select(MSMS_annotation, short_name) %>%
+        dplyr::select(MSMS_annotation, short_name) %>%
         distinct() %>%
         arrange(MSMS_annotation)
 
@@ -557,7 +557,7 @@ AddClassAnnotation <- function(lcms_hit_peaks) {
             locale = readr::locale(encoding = "latin1"),
             show_col_types = FALSE
         ) %>%
-        select(short_name, Sub_Class, Class) %>%
+        dplyr::select(short_name, Sub_Class, Class) %>%
         distinct()
 
     ### Check to see if there is any missing labels
@@ -592,8 +592,8 @@ AddClassAnnotation <- function(lcms_hit_peaks) {
     mutate(
         MSMS_annotation = NULL
     ) %>%
-    rename(
-        short_name = "MSMS_annotation"
+    dplyr::rename(
+        MSMS_annotation = `short_name`
     ) %>%
     distinct()
 
@@ -900,7 +900,7 @@ PlotPredDist <- function(
 ) {
     section_dist <- pred_dist %>%
         group_by(section_type) %>%
-        select(section_type, slide_id) %>%
+        dplyr::select(section_type, slide_id) %>%
         distinct() %>%
         count() %>%
         dplyr::pull(n, name = section_type)
@@ -1095,7 +1095,7 @@ LoadROITopMarkers <- function() {
                     ) %>%
                     # filter(vip >= 1.0) %>%
                     arrange(-vip) %>%
-                    select(
+                    dplyr::select(
                         model_name, histopath_type, peak_id, MSMS_annotations,
                         vip, coeff
                     )
@@ -1187,7 +1187,7 @@ TestSgMEClinicalModel <- function(
         ### Convert from a matrix to numeric
         train_preds <- train_preds[, 1]
         #assess.glmnet(cfit$fit.preval, newy = y, family = "binomial")
-        #a <- ME_hit_region_stats %>% select(total_area, normal_area) %>% as.matrix()
+        #a <- ME_hit_region_stats %>% dplyr::select(total_area, normal_area) %>% as.matrix()
         #assess.glmnet(cv_fit, newx = lcms_mat, newy = a)
 
 
@@ -1289,7 +1289,7 @@ TestSgMEClinicalModel <- function(
     plot_data <- as_tibble(all_preds, rownames = "sample_id") %>%
         separate(sample_id, c("case_id", "section_id")) %>%
         left_join(
-            clinical_info %>% select(
+            clinical_info %>% dplyr::select(
                 case_id, tumor_stage_AJCC_V8, edmonson_grade,
                 metavir_fibrosis_score, steatosis_score, necrosis_score
             )
