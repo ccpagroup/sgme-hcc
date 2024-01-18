@@ -46,8 +46,8 @@ with the code when the git repository is cloned.
 Code overview
 -------------
 The code was developed using `R v4.3.1` and `Bioconductor v3.17` under
-Linux and an Intel-based PC. It should work under newer versions of R and 
-libraries or other operating systems. 
+Linux (Gentoo 2.14) and an PC (Intel i9-7940X). It should work under newer 
+versions of R and libraries or other operating systems.
 
 The following directories will be generated and populated after running the code:
 
@@ -61,7 +61,8 @@ The following directories will be generated and populated after running the code
 
 Running the SgME profiling code for the HCC study
 -------------------------------------------------
-1. Clone the git repository to a desired project location
+1. Clone the git repository to a desired project location. Depending on the
+   network connection speed, the cloning usually takes < 1 min to complete.
    ```console
    $ cd $desired_project_location
    $ git clone https://github.com/ccpagroup/sgme-hcc.git
@@ -115,8 +116,9 @@ Running the SgME profiling code for the HCC study
 
 5. Run all the data processing and analysis steps.
    This must be done before generating all the figures.
-   If a script hangs without any progress after one hour, please close the R session and re-try the script
-   in a new R session.
+   Step 1 usually takes longer (~10-15 mins) to run, while the rest of the steps
+   are much faster (~1-5 mins). If a script hangs after the indicated time,
+   please close the R session and re-try the script in a new R session.
    ```R
    source("Step1_Find_LCMS_Marker.R")
    source("Step2_Find_Prominent_Peaks-FigS4.R")
@@ -130,6 +132,7 @@ Running the SgME profiling code for the HCC study
 
 6. Generate all the figures, which are saved under the `figures/` directories 
    as both PNG and PDF formats. The PDF formats can be imported into Inkscape.
+   Each figures will take ~1-3 mins to be generated. 
    It is recommended to run the following scripts under a new fresh R session.
    ```R
    source("Fig1ceg-S2_LCMS_spectrum.R")
