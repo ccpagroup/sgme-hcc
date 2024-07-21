@@ -2,7 +2,8 @@
 require(here)
 
 ### Define the location of the STx profiles for F008_CA and F011_CA
-### visium_raw_dir <- ""
+### Note: Please uncomment below and update with the full path to "STx_profiles"
+### visium_raw_dir <- "XXXX/STx_profiles"
 
 peak_summary_mode_study <- "lcms_only"
 is_normalized_study <- TRUE
@@ -139,9 +140,8 @@ if (file.exists(here("conf", "study_conf_local.R"))) {
 }
 
 ### Warn the users if key variables are not defined
-if (!exists(visium_raw_dir) || visium_raw_dir == "") {
+if (!exists("visium_raw_dir") || visium_raw_dir == "") {
     stop(
-        "visium_raw_dir is not defined. "
-        "Please update conf/study_conf.R to the downloaded STX_profiles folder."
+        "visium_raw_dir is not defined.\nPlease update conf/study_conf.R to the downloaded STX_profiles folder.\nPlease read README.md for more information."
     )
 }

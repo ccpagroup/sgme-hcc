@@ -116,9 +116,12 @@ Running the SgME profiling code for the HCC study
 
 5. Run all the data processing and analysis steps.
    This must be done before generating all the figures.
-   Step 1 usually takes longer (~10-15 mins) to run, while the rest of the steps
-   are much faster (~1-5 mins). If a script hangs after the indicated time,
-   please close the R session and re-try the script in a new R session.
+   Step 1 usually takes longer (~20-30 mins) to run, while the rest of the steps
+   are much faster (~1-5 mins). 
+   
+   If a script hangs after the indicated time,
+   please kill the R session and re-try the script in a new R session. It is
+   also advisable to restart R after running each step.
    ```R
    source("Step1_Find_LCMS_Marker.R")
    source("Step2_Find_Prominent_Peaks-FigS5.R")
@@ -134,7 +137,9 @@ Running the SgME profiling code for the HCC study
 6. Generate all the figures, which are saved under the `figures/` directories 
    as both PNG and PDF formats. The PDF formats can be imported into Inkscape.
    Each figures will take ~1-3 mins to be generated. 
-   It is recommended to run the following scripts under a new fresh R session.
+   Please run each of the following scripts under a new fresh R session, 
+   because some of the R libraries may mask other libraries with the 
+   same function names.
    ```R
    source("Fig1cdf-S3_LCMS_spectrum.R")
    source("Fig1eghi-2d-S4_Find_Stage_AMFs_DEGs.R")
