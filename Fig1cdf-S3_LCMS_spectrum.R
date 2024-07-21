@@ -127,7 +127,7 @@ for (img_type in c(".png", ".pdf")) {
 }
 
 ### "=========================================================================="
-### Fig. S2 Can we distinguish between normal, HCC, and CCA?
+### Fig. S3 Can we distinguish between normal, HCC, and CCA?
 ### * Tumors are different from Normal
 ### * HCC is different from CCA. Thus CCA can be removed.
 ### "=========================================================================="
@@ -207,7 +207,7 @@ SavePLSDAPlot(
 table(lcms_grps$hcc_stage_grps)
 
 ### "=========================================================================="
-### Fig. 1g The RNA transcriptomics landscape
+### Fig. 1f The RNA transcriptomics landscape
 ### "=========================================================================="
 load(
     file = here("results", "plsda", "RNA_hcc_stage.Rdata")

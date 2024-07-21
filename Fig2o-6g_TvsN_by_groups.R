@@ -1,7 +1,7 @@
 ### "========================================================================="
 ### Plot tissue-averaged tumor vs normal comparisons
 ### Note: this can only be run after the PM group has been saved in
-###       Fig5def_SgME_PM_dist_heatmap.R
+###       Fig6def_SgME_PM_dist_heatmap.R
 ### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
@@ -212,6 +212,7 @@ PlotVolcano <- function(
     )
 }
 
+### Fig. 6g
 for (PM_group in levels(PM_groups)) {
     PlotVolcano(
         test_res, x_label,
@@ -221,6 +222,7 @@ for (PM_group in levels(PM_groups)) {
     )
 }
 
+### Fig. 2o
 PlotVolcano(
     test_res, x_label,
     PM_group = "all",

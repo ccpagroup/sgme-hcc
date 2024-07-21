@@ -69,7 +69,7 @@ Running the SgME profiling code for the HCC study
    ```   
 
 2. (Optional) Download the STx profiles to a desired data location. This is only
-   needed for the spatial transcriptomics analysis in Step 5 and Fig 4l.
+   needed for the spatial transcriptomics analysis in Step 5 and Fig 5.
    
    ```console
    $ cd $desired_data_location
@@ -81,7 +81,7 @@ Running the SgME profiling code for the HCC study
    $ rm md5sum.txt
    ```
 
-   Set the location of the STx profiles by updating the configuration file,
+   Set the location of the downloaded STx profiles in the configuration file,
    `conf/study_conf.R`, using a text editor.
 
    ```R
@@ -121,11 +121,12 @@ Running the SgME profiling code for the HCC study
    please close the R session and re-try the script in a new R session.
    ```R
    source("Step1_Find_LCMS_Marker.R")
-   source("Step2_Find_Prominent_Peaks-FigS4.R")
-   source("Step3_Build_SgME_Map_Classifiers-Fig5ab-S10.R")
+   source("Step2_Find_Prominent_Peaks-FigS5.R")
+   source("Step3_Build_SgME_Map_Classifiers-Fig6ab-S11.R")
    source("Step4_COMETs_Path_Analysis.R")
-   source("Step5_Visium_analysis-Fig4l.R")
-   source("Step6_SgMERdeconv-Fig6bcdef-S11.R")
+   source("Step5a_Visium_analysis-Fig5e.R")
+   source("Step5b_Visium_analysis-Fig5ghi.R")
+   source("Step6_SgMERdeconv-Fig7bcdef-S12.R")
    source("Step7_ExportData.R")
    q()
    ```
@@ -135,23 +136,23 @@ Running the SgME profiling code for the HCC study
    Each figures will take ~1-3 mins to be generated. 
    It is recommended to run the following scripts under a new fresh R session.
    ```R
-   source("Fig1ceg-S2_LCMS_spectrum.R")
-   source("Fig1fghij-2d-S3_Find_Stage_AMFs_DEGs.R")
-   source("Fig1k-2e_InterTH_and_IntraTH.R")
+   source("Fig1cdf-S3_LCMS_spectrum.R")
+   source("Fig1eghi-2d-S4_Find_Stage_AMFs_DEGs.R")
+   source("Fig1j-2e_InterTH_and_IntraTH.R")
    source("Fig2bc_Most_abundant_peaks.R")
    source("Fig2hklmn_LCMS_MSI_Comparison.R")
    source("Fig3e_DESI_ROI_Heatmap.R")
    source("Fig3fgh_DESI_HistoPath_Classifiers.R")
    source("Fig3ij_DESI_HistoPath_Perf.R")
-   source("Fig4abcdef_DESI_SgME_VIP_vs_Coeff.R")
-   source("Fig4j_S8_COMETs_Path_Pathway.R")
-   source("Fig5c_DESI_MER_Prediction.R")
-   source("Fig5def_SgME_PM_dist_heatmap.R")
-   ### Note: Fig2g-5g_TvsN_by_groups.R must be run only after 
-   ###       Fig5def_SgME_PM_dist_heatmaps.R because it will generate data
-   ###       needed by Fig5g
-   source("Fig2g-5g_TvsN_by_groups.R")
-   source("FigS1_LCMS_spectrum.R")
+   source("Fig4abcdef_DESI_SgME_VIP_vs_Coeff.R")   
+   source("Fig5c-S9_COMETs_Path_enrichment.R")
+   source("Fig6c_DESI_MER_Prediction.R")
+   source("Fig6def_SgME_PM_dist_heatmap.R")
+   ### Note: Fig2o-6g_TvsN_by_groups.R must be run only after 
+   ###       Fig6def_SgME_PM_dist_heatmaps.R because it will generate data
+   ###       needed by Fig6g
+   source("Fig2o-6g_TvsN_by_groups.R")
+   source("FigS2_LCMS_spectrum.R")
    q()
    ```
 

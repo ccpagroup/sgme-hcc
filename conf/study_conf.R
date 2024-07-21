@@ -1,7 +1,8 @@
 ### Study configurations
+require(here)
 
 ### Define the location of the STx profiles for F008_CA and F011_CA
-visium_raw_dir <- "$desired_data_location/STx_profiles"
+### visium_raw_dir <- ""
 
 peak_summary_mode_study <- "lcms_only"
 is_normalized_study <- TRUE
@@ -131,3 +132,16 @@ RNA_log2FC_thres <- log2(1.2)
 
 LCMS_padj_thres <- 0.05
 LCMS_log2FC_thres <- log2(1.2)
+
+### Load local conf if available
+if (file.exists(here("conf", "study_conf_local.R"))) {
+    source(here("conf", "study_conf_local.R"))
+}
+
+### Warn the users if key variables are not defined
+if (!exists(visium_raw_dir) || visium_raw_dir == "") {
+    stop(
+        "visium_raw_dir is not defined. "
+        "Please update conf/study_conf.R to the downloaded STX_profiles folder."
+    )
+}

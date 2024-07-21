@@ -6,3 +6,4 @@ temp/
 data/roi/Backup*
 TODO
 Trash_*.R
+conf/study_conf_local.R

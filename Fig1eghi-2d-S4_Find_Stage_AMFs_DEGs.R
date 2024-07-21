@@ -150,7 +150,7 @@ PlotStage <- function(cur_stats, log2FC_thres, padj_thres, omics_name, col_title
 fs::dir_create(here("figures", "lcms"))
 fs::dir_create(here("figures", "RNA"))
 
-### Fig. 1f
+### Fig. 1e
 lcms_p <- PlotStage(
     lcms_stats, LCMS_log2FC_thres, LCMS_padj_thres, "Metabolomics", "MFs"
 )
@@ -168,14 +168,14 @@ pdf(here("figures", "lcms", "lcms_hit_stages.pdf"), width = 6, height = 6)
 draw(lcms_hit_p)
 dev.off()
 
-### Fig. 1h
+### Fig. 1g
 RNA_p <- PlotStage(RNA_stats, RNA_log2FC_thres, RNA_padj_thres, "Transcriptomics", "RNAs")
 pdf(here("figures", "RNA", "RNA_stages.pdf"), width = 6, height = 6)
 draw(RNA_p)
 dev.off()
 
 ### "--------------------------------------------------------------------------"
-### Fig. 1i. Find pathway enrichment
+### Fig. 1h. Find pathway enrichment
 ### "--------------------------------------------------------------------------"
 library(clusterProfiler)
 library(enrichplot)
@@ -285,7 +285,7 @@ PlotEnrich <- function(MsigDB, pval_thres, left_margin, show_category){
     )
 }
 
-### Plot the top pathways
+### Fig. 1h. Plot the top pathways
 SavePlot(
     PlotEnrich(Stage_MsigDB, pval_thres = 1e-12, left_margin = 2.2, show_category = 14),
     width = 8,
@@ -294,7 +294,7 @@ SavePlot(
     file_name = "Stage_Pathway_General_Top"
 )
 
-### Plot the all pathways
+### Fig. S4a. Plot the all pathways
 SavePlot(
     PlotEnrich(Stage_MsigDB, pval_thres = 1e-12, left_margin = 1.9, show_category = 50),
     width = 8,
@@ -335,7 +335,7 @@ Metabo_MsigDB <- setReadable(
     Metabo_MsigDB, OrgDb = org.Hs.eg.db::org.Hs.eg.db, keyType = "ENSEMBL"
 )
 
-### Plot the top pathways
+### Fig. 1i. Plot the top pathways
 SavePlot(
     PlotEnrich(Metabo_MsigDB, pval_thres = 1e-5, left_margin = 2.22, show_category = 16),
     width = 8,
@@ -344,6 +344,7 @@ SavePlot(
     file_name = "Stage_Pathway_Meta_Top"
 )
 
+### Fig. S4b. Plot all the pathways 
 SavePlot(
     PlotEnrich(Metabo_MsigDB, pval_thres = 1e-5, left_margin = 2.11, show_category = 40),
     width = 8,

@@ -149,7 +149,7 @@ vip_enrich_short_p <- dotplot(
         #legend.box = "horizontal"
     )
 
-### Save the plots
+### Fig. 5c. Save the plots
 SavePlot(
     vip_enrich_short_p,
     width = 7.75,
@@ -185,7 +185,7 @@ vip_enrich_full_p <- dotplot(
         #legend.box = "horizontal"
     )
 
-### Save the plots
+### Fig. S9. Save the plots
 SavePlot(
     vip_enrich_full_p,
     width = 8,

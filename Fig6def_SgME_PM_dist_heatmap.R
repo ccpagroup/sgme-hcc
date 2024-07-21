@@ -24,7 +24,7 @@ multi_pred_labels <- plsda_multi$pred_labels
 steatotic_pred_labels <- plsda_steatotic$pred_labels
 fibrotic_pred_labels <- plsda_fibrotic$pred_labels
 
-### Fig. 5e =====================================================
+### Fig. 6e =====================================================
 ### Load the raw data as matrix
 msi_tissue_mat <- LoadAllRawMSIMat(
     slide_ids = test_slide_ids,
@@ -142,8 +142,6 @@ clust_sizes <- table(row_splits)
 size_labels <- paste0("\n(", clust_sizes, ", ", signif(clust_sizes / sum(clust_sizes) * 100, 2), "%)")
 levels(row_splits) <- paste0(levels(row_splits), size_labels)
 
-
-
 msi_heatmap <- ComplexHeatmap::Heatmap(
     msi_mat,
     cluster_row_slices = FALSE,
@@ -214,7 +212,7 @@ for (img_type in c(".png", ".pdf")) {
 }
 
 ### "=========================================================================="
-### Fig. 5d. Plot individual PMs
+### Fig. 6d. Plot individual PMs
 ### "=========================================================================="
 pm_list <- c("P73", "P120", "P135", "N14", "N71", "N54", "P29")
 pm_labels <- lcms_hit_peaks %>%
@@ -292,7 +290,7 @@ SavePlot(
 )
     
 ### "=========================================================================="
-### Plot Fig. 5f
+### Plot Fig. 6f
 ### "=========================================================================="
 PlotDistUpset <- function(
     plot_mat, y_title, file_name, width, y_lim = c(0, 20)
