@@ -81,10 +81,11 @@ Running the SgME profiling code for the HCC study
    $ rm md5sum.txt
    ```
 
-   Set the location of the downloaded STx profiles in the configuration file,
-   `conf/study_conf.R`, using a text editor.
-
+   Create a new configuration file, `study_conf_local.R`, under the `conf` 
+   directory using a text editor, and define the location of the downloaded STx 
+   profiles in the file:
    ```R
+   ### conf/study_conf_local.R
    ### Define the location of the STx profiles for F008_CA and F011_CA
    visium_raw_dir <- "$desired_data_location/STx_profiles"
    ```
@@ -117,7 +118,7 @@ Running the SgME profiling code for the HCC study
 5. Run all the data processing and analysis steps.
    This must be done before generating all the figures.
    Step 1 usually takes longer (~20-30 mins) to run, while the rest of the steps
-   are much faster (~1-5 mins). 
+   are much faster (~1-5 mins). The Warning messages can be ignored.
    
    If a script hangs after the indicated time,
    please kill the R session and re-try the script in a new R session. It is

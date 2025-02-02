@@ -3,6 +3,7 @@ outputs/
 results/
 images/
 temp/
+test/
 data/roi/Backup*
 TODO
 Trash_*.R
