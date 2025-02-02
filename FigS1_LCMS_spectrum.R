@@ -1,7 +1,7 @@
 ### "========================================================================="
-### Plot Fig S2
+### Plot Fig S1
 ###
-### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
+### Copyright (c) 2021-2025. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
 ### "========================================================================="
@@ -19,7 +19,7 @@ clinical_info <- LoadClinicalInfo()
 load(here("data", "lcms", "lcms_peaks.Rdata"))
 
 ### "=========================================================================="
-### Fig. S2 The LC/MS raw data plot
+### Fig. S1 The LC/MS raw data plot
 ### "=========================================================================="
 ### Plot a heatmap for all the tumors
 GetLCMSPlotData <- function(lcms_mode, is_diff) {

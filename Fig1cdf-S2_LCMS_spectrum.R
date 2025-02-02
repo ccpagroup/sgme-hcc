@@ -1,7 +1,7 @@
 ### "========================================================================="
 ### Plot Fig 1
 ###
-### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
+### Copyright (c) 2021-2025. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
 ### "========================================================================="
@@ -127,7 +127,7 @@ for (img_type in c(".png", ".pdf")) {
 }
 
 ### "=========================================================================="
-### Fig. S3 Can we distinguish between normal, HCC, and CCA?
+### Fig. S2 Can we distinguish between normal, HCC, and CCA?
 ### * Tumors are different from Normal
 ### * HCC is different from CCA. Thus CCA can be removed.
 ### "=========================================================================="

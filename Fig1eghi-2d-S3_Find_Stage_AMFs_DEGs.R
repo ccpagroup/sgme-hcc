@@ -1,7 +1,7 @@
 ### "========================================================================="
 ### Find altered MFs and DEGs
 ###
-### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
+### Copyright (c) 2021-2025. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
 ### "========================================================================="
@@ -294,7 +294,7 @@ SavePlot(
     file_name = "Stage_Pathway_General_Top"
 )
 
-### Fig. S4a. Plot the all pathways
+### Fig. S3a. Plot the all pathways
 SavePlot(
     PlotEnrich(Stage_MsigDB, pval_thres = 1e-12, left_margin = 1.9, show_category = 50),
     width = 8,
@@ -344,7 +344,7 @@ SavePlot(
     file_name = "Stage_Pathway_Meta_Top"
 )
 
-### Fig. S4b. Plot all the pathways 
+### Fig. S3b. Plot all the pathways 
 SavePlot(
     PlotEnrich(Metabo_MsigDB, pval_thres = 1e-5, left_margin = 2.11, show_category = 40),
     width = 8,

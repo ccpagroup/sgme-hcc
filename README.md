@@ -124,12 +124,12 @@ Running the SgME profiling code for the HCC study
    also advisable to restart R after running each step.
    ```R
    source("Step1_Find_LCMS_Marker.R")
-   source("Step2_Find_Prominent_Peaks-FigS5.R")
-   source("Step3_Build_SgME_Map_Classifiers-Fig6ab-S11.R")
+   source("Step2_Find_Norm_Coeffs.R")
+   source("Step3_Build_SgME_Map_Classifiers-Fig6ab-S9.R")
    source("Step4_COMETs_Path_Analysis.R")
    source("Step5a_Visium_analysis-Fig5e.R")
    source("Step5b_Visium_analysis-Fig5ghi.R")
-   source("Step6_SgMERdeconv-Fig7bcdef-S12.R")
+   source("Step6_SgMERdeconv-Fig7bcdef-S10.R")
    source("Step7_ExportData.R")
    q()
    ```
@@ -141,8 +141,8 @@ Running the SgME profiling code for the HCC study
    because some of the R libraries may mask other libraries with the 
    same function names.
    ```R
-   source("Fig1cdf-S3_LCMS_spectrum.R")
-   source("Fig1eghi-2d-S4_Find_Stage_AMFs_DEGs.R")
+   source("Fig1cdf-S2_LCMS_spectrum.R")
+   source("Fig1eghi-2d-S3_Find_Stage_AMFs_DEGs.R")
    source("Fig1j-2e_InterTH_and_IntraTH.R")
    source("Fig2bc_Most_abundant_peaks.R")
    source("Fig2hklmn_LCMS_MSI_Comparison.R")
@@ -150,14 +150,14 @@ Running the SgME profiling code for the HCC study
    source("Fig3fgh_DESI_HistoPath_Classifiers.R")
    source("Fig3ij_DESI_HistoPath_Perf.R")
    source("Fig4abcdef_DESI_SgME_VIP_vs_Coeff.R")   
-   source("Fig5c-S9_COMETs_Path_enrichment.R")
+   source("Fig5c-S7_COMETs_Path_enrichment.R")
    source("Fig6c_DESI_MER_Prediction.R")
    source("Fig6def_SgME_PM_dist_heatmap.R")
    ### Note: Fig2o-6g_TvsN_by_groups.R must be run only after 
    ###       Fig6def_SgME_PM_dist_heatmaps.R because it will generate data
    ###       needed by Fig6g
    source("Fig2o-6g_TvsN_by_groups.R")
-   source("FigS2_LCMS_spectrum.R")
+   source("FigS1_LCMS_spectrum.R")
    q()
    ```
 
@@ -165,7 +165,7 @@ License for the code and processed data
 ---------------------------------------
 MIT License
 
-Copyright (c) 2021-2024 Bioinformatics Institute, A*STAR, Singapore
+Copyright (c) 2021-2025 Bioinformatics Institute, A*STAR, Singapore
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

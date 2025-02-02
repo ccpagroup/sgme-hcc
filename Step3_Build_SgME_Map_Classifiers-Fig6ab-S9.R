@@ -1,7 +1,7 @@
 ### "========================================================================="
 ### Build SgME map classifiers
 ###
-### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
+### Copyright (c) 2021-2025. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
 ### "========================================================================="
@@ -552,7 +552,7 @@ plsda_fibrotic <- RunSgMEClassifier(
 )
 
 ### "========================================================================="
-### Fig. 5a and S10. Save all the prediction as images
+### Fig. 6ab and S9. Save all the prediction as images
 ### "========================================================================="
 plsda_multi <- LoadSgMEClassifier("plsda", "plsda_multi")
 saveRDS(plsda_multi, here("results", "plsda", "msi_multi.rds"))

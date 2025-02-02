@@ -1,7 +1,7 @@
 ### "========================================================================="
 ### Perform SgMERdeconv and plot all Figure 6
 ###
-### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
+### Copyright (c) 2021-2025. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
 ### "========================================================================="

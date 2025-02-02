@@ -1,7 +1,7 @@
 ### "========================================================================="
 ### Plot COMET's Path analysis results
 ###
-### Copyright (c) 2021-2024. Bioinformatics Institute, A*STAR, Singapore
+### Copyright (c) 2021-2025. Bioinformatics Institute, A*STAR, Singapore
 ### License: MIT License. See LICENSE for the full license.
 ### Authors: Lit-Hsin Loo (loolh@bii.a-star.edu.sg)
 ### "========================================================================="
@@ -185,7 +185,7 @@ vip_enrich_full_p <- dotplot(
         #legend.box = "horizontal"
     )
 
-### Fig. S9. Save the plots
+### Fig. S7. Save the plots
 SavePlot(
     vip_enrich_full_p,
     width = 8,

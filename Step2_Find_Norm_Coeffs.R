@@ -12,7 +12,7 @@ peak_summary_mode <- "lcms_only"
 ### We need to find common peaks that are the highest and the most
 ### homogenous one
 ### "========================================================================"
-### Generate the stat scatter plot Fig. S4a
+### Generate the stat scatter plot
 PlotTopCommonTissuePeaks(
     ion_type = "pos",
     align_res = top_common_align_reses[["pos"]],
@@ -26,7 +26,7 @@ common_promi_peaks <- FindTopCommonProminentPeaks(
     msi_conf
 )
 
-### Generate the stat scatter plot Fig. S4a
+### Generate the stat scatter plot
 PlotTopCommonTissuePeaks(
     ion_type = "neg",
     align_res = top_common_align_reses[["neg"]],
@@ -48,14 +48,12 @@ common_promi_peaks <- FindTopCommonProminentPeaks(
 ###    at the pixel, section, or slide levels
 ### 3) Save the norm_coeff
 ### "========================================================================"
-### Fig. S4c
 norm_coeff <- FindNormCoeff(
     ion_type = "pos",
     peak_summary_mode = peak_summary_mode,
     msi_conf, is_plot = TRUE
 )
 
-### Fig. S4c
 norm_coeff <- FindNormCoeff(
     ion_type = "neg",
     peak_summary_mode = peak_summary_mode,
